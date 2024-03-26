@@ -52,6 +52,7 @@ lab=avss}
 C {devices/netlist.sym} -10 -300 2 1 {name=SPICE2 only_toplevel=false value="
 .lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 .include /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+.include /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
 .control
     tran 1u 0.5m
     plot vout 10*(vinp-vinm)
@@ -100,7 +101,6 @@ C {devices/gnd.sym} -80 -60 0 0 {name=l24 lab=GND}
 C {devices/vsource.sym} 0 -90 0 0 {name=vssd value=0}
 C {devices/lab_pin.sym} 0 -120 0 1 {name=l25 sig_type=std_logic lab=dvss}
 C {devices/gnd.sym} 0 -60 0 0 {name=l26 lab=GND}
-C {/foss/designs/sky130_rhythmic_ip__dynamic_comparator/xschem/comparator_single_tail.sym} 420 0 0 0 {name=x1}
 C {devices/capa.sym} 680 -50 0 0 {name=C1
 m=1
 value=1p
@@ -108,3 +108,4 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 550 -70 2 0 {name=l27 sig_type=std_logic lab=vout}
 C {devices/lab_pin.sym} 680 -20 0 1 {name=l30 sig_type=std_logic lab=dvss}
+C {/foss/designs/sky130_rhythmic_ip__dynamic_comparator_3v3/xschem/dynamic_comparator_hv2lv.sym} 420 0 0 0 {name=x2}
